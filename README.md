@@ -8,7 +8,7 @@ hosting — see the `php-backend` folder's own README for that half.
 
 ```
 Vercel (this app)  ──fetch()──>  cPanel (PHP backend)
-  caspas.vercel.app                  datardius.co.ke/backend/*.php
+  caspas.vercel.app                  yourdomain.co.ke/backend/*.php
 ```
 
 ## 1. Deploy the PHP backend first
@@ -36,7 +36,7 @@ git push -u origin main
 1. Go to [vercel.com/new](https://vercel.com/new) and import the repo.
 2. Vercel auto-detects Next.js — no build config changes needed.
 3. Before deploying, add an **Environment Variable**:
-   - `NEXT_PUBLIC_API_URL` = `https://datardius.co.ke` (your PHP backend's base URL, no trailing slash)
+   - `NEXT_PUBLIC_API_URL` = `https://yourdomain.co.ke` (your PHP backend's base URL, no trailing slash)
 4. Deploy.
 
 ## 4. Update the backend's allowed origins
@@ -50,7 +50,7 @@ error since the two are now on different domains.
 ## 5. Test end-to-end
 
 Visit your Vercel URL, go to **Book an Appointment**, and submit a test
-booking. Then check `https://datardius.co.ke/admin/dashboard.php` (log
+booking. Then check `https://yourdomain.co.ke/admin/dashboard.php` (log
 in with the staff account you created) — the booking should appear.
 
 ## Local development
